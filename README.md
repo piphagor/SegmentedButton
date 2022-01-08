@@ -236,6 +236,7 @@ This project is licensed under the Apache License Version 2.0 - see the [LICENSE
 ```
 Copyright (C) 2016 ceryle
 Copyright (C) 2019 Addison Elliott
+Copyright (C) 2022 Artem Kuzmyk
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.addisonelliott'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -10,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.compileSdkVersion
-        versionCode 12
-        versionName "3.1.9"
+        versionCode 13
+        versionName "3.2.0"
     }
 
     buildTypes {
@@ -52,12 +50,31 @@ artifacts {
     archives javadocJar
 }
 
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.piphagor'
+                artifactId = 'segmentedbutton'
+                version = '3.2.0'
+            }
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.13-beta-3'
+    testImplementation 'junit:junit:4.13.2'
 
-    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.appcompat:appcompat:1.4.0"
     implementation "androidx.interpolator:interpolator:1.0.0"
-    implementation "androidx.core:core:1.0.2"
+    implementation "androidx.core:core:1.7.0"
     api 'com.github.addisonElliott:RippleDrawable:3.0.0'
 }

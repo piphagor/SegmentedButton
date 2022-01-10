@@ -1,4 +1,4 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SegmentedButton-green.svg?style=true)](https://android-arsenal.com/details/1/4445) [![](https://jitpack.io/v/addisonelliott/segmentedbutton.svg)](https://jitpack.io/#addisonelliott/segmentedbutton)
+[![](https://jitpack.io/v/piphagor/segmentedbutton.svg)](https://jitpack.io/#piphagor/segmentedbutton)
 
 # SegmentedButton
 
@@ -16,7 +16,7 @@ Android view that mimics iOS's [SegmentedControl](https://developer.apple.com/de
 
 ## Old Library
 
-This project is originally forked from [ceryle/SegmentedButton](https://github.com/ceryle/SegmentedButton) but has been revamped and given some TLC. The parent repository has been stagnant since **October 17th, 2017**.
+This project is originally forked from [addisonElliott/SegmentedButton](https://github.com/addisonElliott/SegmentedButton).
 
 ## Preview
 
@@ -52,27 +52,7 @@ and:
 
 ```gradle
 dependencies {
-    implementation 'com.github.addisonelliott:SegmentedButton:$LATEST_VERSION'
-}
-```
-
-**Note:** The `$LATEST_VERSION` string should be replaced with the latest version. The available versions can be found
-here: https://jitpack.io/#addisonElliott/SegmentedButton
-
-**Note:** This library uses the AndroidX packages rather than the older Android support libraries. Periodic releases
-with the Android support library will be released based on user demand with the version appended with `-support` (e.g.
-`3.1.2-support` for `$LATEST_VERSION`). It is strongly recommended to upgrade your project to AndroidX to obtain the
-latest features & bug fixes.
-
-**Note:** Java 8 is required to use this library. This can be done by adding the following code to `build.gradle` while
-using the Android plugin with a version of `3.0.0` or higher.
-
-```gradle
-android {
-    compileOptions {
-        sourceCompatibility '1.8'
-        targetCompatibility '1.8'
-    }
+    implementation 'com.github.piphagor:SegmentedButton:3.2.0'
 }
 ```
 

@@ -203,7 +203,7 @@ Check out the [sample project](https://github.com/addisonElliott/SegmentedButton
 - linearOutSlowIn
 - overshoot
 
-These animations can be set using the attribute noted above like so: `app:segmentedButtonGroup_selectionAnimationInterpolator="bounce"`.
+These animations can be set using the attribute noted above like so: `app:sbg_selectionAnimationInterpolator="bounce"`.
 
 ## Support
 

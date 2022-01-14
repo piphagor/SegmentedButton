@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.0.4'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -20,12 +20,6 @@ allprojects {
             url "https://jitpack.io"
         }
     }
-}
-
-ext {
-    minSdkVersion = 16
-    compileSdkVersion = 30
-    buildToolsVersion = '30.0.3'
 }
 
 task clean(type: Delete) {
